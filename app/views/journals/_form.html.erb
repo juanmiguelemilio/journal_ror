@@ -1,0 +1,11 @@
+<%= form_for @journal do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :content %>
+  <%= f.text_area :content %>
+
+  <%= f.submit "Add entry" %>
+
+<% end %>
