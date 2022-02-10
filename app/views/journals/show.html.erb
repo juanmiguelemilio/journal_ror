@@ -1,2 +1,12 @@
-<h1>Journals#show</h1>
-<p>Find me in app/views/journals/show.html.erb</p>
+<div class="container-fluid mt-3">
+
+
+<h3><%= @journal.title %> </h3>
+<h5><%= @journal.category.category %></h5>
+<p><%= @journal.content %></p>
+
+<%= link_to "Edit", edit_journal_path(@journal.id), class: 'btn btn-warning' %>
+<%= link_to "Delete", journal_path(@journal.id), method: :delete, class: 'btn btn-danger' %>
+<%= link_to "Back", journals_path, class: 'btn btn-dark' %>
+
+</div>
