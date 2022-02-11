@@ -19,7 +19,7 @@
     <%= f.select :category_id, Category.all.map { |cat| [cat.category, cat.id] } %>
     </div>
 
-    <%= f.submit "Add entry", class: 'btn btn-dark' %>
+    <%= f.submit class: 'btn btn-dark' %>
     <%= link_to "Back", journals_path, class: 'btn btn-secondary' %>
     <% end %>
     </div>

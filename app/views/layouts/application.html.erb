@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JournalRor</title>
+    <title>Polar</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -15,9 +15,9 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <img src="assets/noun-polar-bear-2.svg" alt="" width="50" height="44" class="d-inline-block align-text-top">
+        <%= image_tag "noun-polar-bear-2.svg", class: "logo"  %>
+        <%# <img src="assets/noun-polar-bear-2.svg" alt="" width="50" height="44" class="d-inline-block align-text-top"> %>
         <a class="navbar-brand" href="#"><%= link_to "Polar", journals_path, class: 'navbar-brand' %></a>
-        
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

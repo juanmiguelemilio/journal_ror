@@ -18,3 +18,12 @@
 textarea {
   height: 400px;
 }
+
+.logo {
+  width: 50px;
+  height: 44px;
+}
+
+li {
+  list-style-type: none;
+}

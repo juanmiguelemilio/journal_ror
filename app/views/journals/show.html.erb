@@ -1,12 +1,19 @@
-<div class="container-fluid mt-3">
+<div class="container-fluid mt-3" style="
+    margin-right: 100px;
+    padding-right: 250px;
+    padding-left: 250px;
+    padding-bottom: 100px;
+    padding-top: 25px;
+">
 
 
 <h3><%= @journal.title %> </h3>
 <h5><%= @journal.category.category %></h5>
-<p><%= @journal.content %></p>
-
 <%= link_to "Edit", edit_journal_path(@journal.id), class: 'btn btn-warning' %>
-<%= link_to "Delete", journal_path(@journal.id), method: :delete, class: 'btn btn-danger' %>
+<%= link_to "Delete", journal_path(@journal), method: :delete, class: 'btn btn-danger' %>
 <%= link_to "Back", journals_path, class: 'btn btn-dark' %>
+<p><%= markdown(@journal.content) %></p>
+
+
 
 </div>
