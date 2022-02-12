@@ -1,7 +1,7 @@
 <div class="flex-row d-flex justify-content-center">
 
 <div class="col-md-8">
-  <div class="card mt-5">
+  <div class="">
     <div class="card-body">
     <%= form_for @journal do |f| %>
 
@@ -13,11 +13,11 @@
     <div class="form-group">
     <%= f.label :content %>
     <%= f.text_area :content, class: 'form-control' %>
-    </div>
+    </div> <br>
 
     <div class="form-group">
     <%= f.select :category_id, Category.all.map { |cat| [cat.category, cat.id] } %>
-    </div>
+    </div> <br>
 
     <%= f.submit class: 'btn btn-dark' %>
     <%= link_to "Back", journals_path, class: 'btn btn-secondary' %>

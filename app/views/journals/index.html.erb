@@ -1,4 +1,4 @@
-<div class="container">
+<%# <div class="container"> %>
 
   <div class="row">
   
@@ -7,10 +7,10 @@
       <div class="row">
         <% @journals.each do |journal| %>
           <div class="col-md-6">
-            <div class="card mt-3">
+            <div class="card text-white bg-dark mt-3">
               <div class="card-body">
-              <h4><%= link_to journal.title, journal_path(journal.id), class: 'link-dark' %></h4>
-              <%= link_to "View", journal_path(journal.id), class: "btn btn-dark" %>
+              <h4><%= link_to journal.title, journal_path(journal.id), class: 'link-light' %></h4> <br>
+              <%= link_to "View", journal_path(journal.id), class: "btn btn-light" %>
               </div>
             </div>
           </div>
@@ -42,6 +42,6 @@
     </div>
   </div>
 
-</div>
+<%# </div> %>
 
 <%# <%= link_to "Add entry", new_journal_path %>

@@ -10,6 +10,8 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -17,10 +19,10 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-3 mb-5 bg-white rounded">
       <div class="container-fluid">
-        <%= image_tag "noun-polar-bear-2.svg", class: "logo"  %>
-        <%= link_to "Polar", journals_path, class: 'navbar-brand' %>
+        <%= link_to "Polar", journals_path, class: 'navbar-brand', style: 'margin-right: 0px;' %>
+        <%= image_tag "noun-polar-bear-2.svg", class: "logo" %>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,11 +35,17 @@
               <%= link_to "To Do", todo_lists_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
-              <%= link_to "Add entry", new_journal_path, class: "nav-link" %>
+              <%= link_to "New entry", new_journal_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+            <%= link_to "New To Do", new_todo_list_path, class: "nav-link" %>
             </li>
           </div>
         </div>
     </nav>
-    <%= yield %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
