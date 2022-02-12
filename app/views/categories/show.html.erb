@@ -5,15 +5,17 @@
     padding-bottom: 100px;
     padding-top: 25px;
 ">
-
-<p id="notice"><%= notice %></p>
+<br>
+<p id="notice"><%= flash.notice %></p>
 
 <p>
   <strong>Category:</strong>
   <%= @category.category %>
 </p>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<div class="btn-toolbar" role="group">
+<%= link_to 'Edit', edit_category_path(@category), class: 'btn btn-dark btn-sm' %>
+<%= link_to 'Back', categories_path, class: 'btn btn-dark btn-sm' %>
+</div>
 
 </div>

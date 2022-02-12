@@ -27,3 +27,8 @@ textarea {
 li {
   list-style-type: none;
 }
+
+.btn {
+  margin: 2px;
+  font-size: smaller;
+}

@@ -1,7 +1,5 @@
 class JournalsController < ApplicationController
 
-  before_action :dependent => :destroy
-
   def index
     @categories = Category.all
 
@@ -50,7 +48,7 @@ class JournalsController < ApplicationController
     @journal = Journal.find(params[:id])
 
     @journal.destroy
-    redirect_to :dependent => :destroy
+    redirect_to :action => :index
   end
 
   private

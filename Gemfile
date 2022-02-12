@@ -57,3 +57,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'redcarpet'
 gem 'coderay'
+
+group :assets do
+  gem 'jquery-rails'
+end

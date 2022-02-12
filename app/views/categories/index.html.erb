@@ -1,5 +1,5 @@
 <div class="container">
-
+<br>
 <p id="notice"><%= notice %></p>
 
 <h3>Categories</h3>
@@ -16,9 +16,9 @@
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.category %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', category, class: 'btn btn-dark btn-sm' %></td>
+        <td><%= link_to 'Edit', edit_category_path(category), class: 'btn btn-dark btn-sm' %></td>
+        <td><%= button_to 'Destroy', category, method: :delete, data: { confirm: 'This will permanently delete your this category and all of its entries, are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
       </tr>
     <% end %>
   </tbody>

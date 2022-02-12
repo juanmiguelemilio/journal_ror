@@ -1,17 +1,20 @@
 <div class="container-fluid mt-3" style="
-    margin-right: 100px;
-    padding-right: 250px;
-    padding-left: 250px;
-    padding-bottom: 100px;
-    padding-top: 25px;
+  margin-right: 100px;
+  padding-right: 250px;
+  padding-left: 250px;
+  padding-bottom: 100px;
+  padding-top: 25px;
 ">
 
 
 <h3><%= @journal.title %> </h3>
 <h5><%= @journal.category.category %></h5>
-<%= link_to "Edit", edit_journal_path(@journal.id), class: 'btn btn-warning' %>
-<%= link_to "Delete", journal_path(@journal), method: :delete, class: 'btn btn-danger' %>
-<%= link_to "Back", journals_path, class: 'btn btn-dark' %>
+<div class="btn-toolbar" role="group">
+	<%= link_to "Edit", edit_journal_path(@journal.id), class: 'btn btn-warning btn-sm' %>
+	<%= button_to "Delete", journal_path(@journal.id), method: :delete, data: { confirm: 'This will permanently delete your journal entry, are you sure?' }, class: 'btn btn-danger btn-sm' %>
+	<%= link_to "Back", journals_path, class: 'btn btn-dark btn-sm' %>
+</div>
+
 <p><%= markdown(@journal.content) %></p>
 
 
