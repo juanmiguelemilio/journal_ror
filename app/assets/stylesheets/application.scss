@@ -190,8 +190,10 @@ body {
 	text-align: center;
 	font-size: 0.8em;
 	color: white;
+	text-decoration: none;
 	a {
 		color: rgb(0, 0, 0);
+		text-decoration: none;
 	}
 }
 
@@ -245,4 +247,12 @@ input[type="submit"] {
 button {
   background-color: transparent;
   border: none;
+}
+
+#button {
+  width: 60px;
+  height: auto;
+  padding: 5px;
+	margin-left: 5px;
+	margin-right: 5px;
 }

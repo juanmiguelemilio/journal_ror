@@ -1,13 +1,12 @@
-<div class="container">
-<br>
+<div class="">
 <p id="notice"><%= notice %></p>
 
-<h3>Categories</h3>
+<h3 class="todo_list_title">Categories</h3> <hr>
 
 <table>
   <thead>
     <tr>
-      <th>Category</th>
+      <%# <th>Category</th> %>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,8 +16,8 @@
       <tr>
         <td><%= category.category %></td>
         <td><%= link_to 'Show', category, class: 'btn btn-dark btn-sm' %></td>
-        <td><%= link_to 'Edit', edit_category_path(category), class: 'btn btn-dark btn-sm' %></td>
-        <td><%= button_to 'Destroy', category, method: :delete, data: { confirm: 'This will permanently delete your this category and all of its entries, are you sure?' }, class: 'btn btn-danger btn-sm' %></td>
+        <td><%= link_to 'Edit', edit_category_path(category), class: 'btn btn-warning btn-sm' %></td>
+        <td><%= button_to 'Destroy', category, method: :delete, data: { confirm: 'This will permanently delete your this category and all of its entries, are you sure?' }, class: 'btn btn-danger btn-sm', id: 'button' %></td>
       </tr>
     <% end %>
   </tbody>
