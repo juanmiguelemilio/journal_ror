@@ -3,11 +3,11 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
-import "bootstrap"
-import "./application.scss"
-import 'bootstrap/dist/js/bootstrap'
-import "bootstrap/dist/css/bootstrap";
-require("stylesheets/application.scss")
+// import "bootstrap"
+// import "./application.scss"
+// import 'bootstrap/dist/js/bootstrap'
+// import "bootstrap/dist/css/bootstrap";
+// require("stylesheets/application.scss")
 
 
 import Rails from "@rails/ujs"
