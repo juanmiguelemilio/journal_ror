@@ -14,6 +14,11 @@
  *= require_self
  */
 
+ /*
+ *= require font-awesome
+ */
+
+ @import "font-awesome";
 
 textarea {
   height: 400px;
@@ -196,6 +201,33 @@ body {
 		text-decoration: none;
 	}
 }
+
+.links-back {
+	display: flex;
+	justify-content: space-between;
+	// margin: 1.5em auto 0 auto;
+	text-align: left;
+	font-size: 0.8em;
+	color: white;
+	text-decoration: none;
+	a {
+		color: rgb(0, 0, 0);
+		text-decoration: none;
+	}
+}
+
+// .links-edit {
+// 	display: flex;
+// 	// margin: 1.5em auto 0 auto;
+// 	text-align: right;
+// 	font-size: 0.8em;
+// 	color: white;
+// 	text-decoration: none;
+// 	a {
+// 		color: rgb(0, 0, 0);
+// 		text-decoration: none;
+// 	}
+// }
 
 .forms {
 	padding: 0 5%;

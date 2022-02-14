@@ -1,3 +1,11 @@
+<div class="links-back">
+  <%= link_to 'Back', todo_lists_path %>
+  <%= link_to 'Edit', edit_todo_list_path(@todo_list) %>
+</div>
+<div class="links-edit">
+  
+</div>
+
 <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
   <div class="toast-header">
     <p id="notice"><%= notice %></p>
@@ -21,7 +29,5 @@
 </div>
 
 <div class="links">
-  <%= link_to 'Edit', edit_todo_list_path(@todo_list) %> |
-  <%= link_to 'Back', todo_lists_path %>
   <%= button_to 'Delete', todo_list_path(@todo_list), method: :delete, data: { confirm: "Are you sure?" } %>
 </div>
