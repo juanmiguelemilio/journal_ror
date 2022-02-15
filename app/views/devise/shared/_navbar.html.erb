@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow p-3 mb-5 bg-white rounded">
+  <div class="container-fluid">
+    <%= link_to "Polar", journals_path, class: 'navbar-brand', style: 'margin-right: 0px;' %>
+    <%= image_tag "noun-polar-bear-2.svg", class: "logo" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <% if !is_logged_in? %>
+          <%= link_to "To Do", todo_lists_path, class: "nav-link" %>
+          <% end %>
+        </li>
+        
+        <li class="nav-item">
+          <% if !is_logged_in? %>
+          <%= link_to "Journals", journals_path, class: "nav-link" %>
+          <% end %>
+        </li>
+        
+        <li class="nav-item">
+          <% if !is_logged_in? %>
+          <%= link_to "Reminders", new_journal_path, class: "nav-link" %>
+          <% end %>
+        </li>
+
+        <li>
+          <% if !is_logged_in? %>
+            <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+            <% else%>
+            <%= link_to "Log in", new_session_path(resource_name) %>
+          <% end %>
+        </li>
+        
+       </div>
+    </div>
+</nav>
