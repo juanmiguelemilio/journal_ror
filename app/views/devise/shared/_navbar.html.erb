@@ -8,29 +8,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item">
-          <% if !is_logged_in? %>
           <%= link_to "To Do", todo_lists_path, class: "nav-link" %>
-          <% end %>
         </li>
         
         <li class="nav-item">
-          <% if !is_logged_in? %>
           <%= link_to "Journals", journals_path, class: "nav-link" %>
-          <% end %>
         </li>
         
         <li class="nav-item">
-          <% if !is_logged_in? %>
           <%= link_to "Reminders", new_journal_path, class: "nav-link" %>
-          <% end %>
         </li>
 
         <li>
-          <% if !is_logged_in? %>
-            <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
-            <% else%>
-            <%= link_to "Log in", new_session_path(resource_name) %>
-          <% end %>
+          <%= link_to 'Sign out', destroy_user_session_path, method: :delete, class: 'nav-link' %>
         </li>
         
        </div>
