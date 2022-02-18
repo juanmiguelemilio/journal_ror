@@ -1,6 +1,6 @@
 # README
 
-Work smart and maximize your productivity with Polar app. This app will help you organize your journal entries into categories and reate your to do list.
+Work smart and maximize your productivity with Polar app. This app will help you organize your journal entries into categories and create your to do list.
 
 # How to clone
 1. git clone https://github.com/mjaguirre-xx/journal_ror.git
