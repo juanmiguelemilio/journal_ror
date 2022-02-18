@@ -1,15 +1,18 @@
 class JournalsController < ApplicationController
   before_action :authenticate_user!
+  before_action :set_journal, only: %i[show edit update destroy]
 
   def index
-    @categories = Category.all
+    @journals = current_user.journals
+    @categories = current_user.categories
+    # @categories = Category.all
 
-    cat = params[:cat]
-    if !cat.nil?
-      @journals = Journal.where(:category_id => cat)
-    else
-      @journals = Journal.all
-    end
+    # cat = params[:cat]
+    # if !cat.nil?
+    #   @journals = Journal.where(:category_id => cat)
+    # else
+    #   @journals = Journal.all
+    # end
   end
 
   def show
@@ -22,9 +25,12 @@ class JournalsController < ApplicationController
   end
 
   def create
-    @journal = Journal.create(journal_params)
+    # @journal = Journal.create(journal_params)
+    # @journal.user_id = current_user.id
+    @journal = current_user.journals.build(journal_params)
 
     if @journal.save
+      
       redirect_to @journal
     else
       render :new
@@ -53,8 +59,13 @@ class JournalsController < ApplicationController
   end
 
   private
+
+  def set_journal
+    @journal = current_user.journals.find(params[:id])
+  end
+
   def journal_params
-    params.require(:journal).permit(:title, :content, :category_id)
+    params.require(:journal).permit(:title, :content, :category_id, :user_id)
   end
 
 end

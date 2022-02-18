@@ -1,4 +1,9 @@
-<h2>Sign up</h2>
+<div class="main-container">
+
+<% name = current_user.present? ? current_user.email : 'Stranger!' %>
+<%= image_tag "noun-polar-bear-2.svg", class: "startup-logo" %>
+<h2>Hello, <%= name %> </h2>
+<p>Create your Polar account here!</p>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -37,3 +42,4 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>

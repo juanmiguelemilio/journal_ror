@@ -6,7 +6,8 @@ class User < ApplicationRecord
          
   has_many :journals
   has_many :todo_lists
-  
-  validates :username, presence: true
+  has_many :categories
 
+  validates :email, presence: true
+  
 end

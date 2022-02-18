@@ -1,0 +1,19 @@
+    <div class="col-md-4">
+      <div class="card mt-3">
+        <div class="card-header">
+          Categories
+        </div>
+        <div class="card-body">
+          <ul class="list-group cat-list">
+            <% @categories.each do |category| %>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <%= link_to category.category, journals_path(:cat => category.id), class: 'link-dark' %>
+              <span class="badge bg-dark rounded-pill"><%= category.journals.count %></span>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to "Add category", new_category_path, class: "nav-link add-new-cat link-dark" %>
+            </li>
+          </ul>
+        </div>
+      </div>

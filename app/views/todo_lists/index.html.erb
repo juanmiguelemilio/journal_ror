@@ -1,3 +1,4 @@
+<div class="container">
 <h3 class="todo_list_title">To Do</h3> <hr>
 <% @todo_lists.each do |todo_list| %>
 <div class="index_row clearfix">
@@ -7,4 +8,5 @@
 <% end %>
 <div class="links">
   <%= link_to "New To Do List", new_todo_list_path %>
+</div>
 </div>

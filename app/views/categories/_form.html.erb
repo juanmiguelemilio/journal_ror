@@ -1,3 +1,5 @@
+<div class="container">
+<h3 class="todo_list_title">Category</h3>
 <%= form_with(model: category) do |form| %>
   <% if category.errors.any? %>
     <div id="error_explanation">
@@ -20,3 +22,7 @@
     <%= form.submit %>
   </div>
 <% end %>
+<div class="links">
+<%= link_to 'Back', categories_path %>
+</div>
+</div>

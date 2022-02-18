@@ -1,12 +1,7 @@
-<div class="container-fluid mt-3" style="
-    margin-right: 100px;
-    padding-right: 250px;
-    padding-left: 250px;
-    padding-bottom: 100px;
-    padding-top: 25px;
-">
-<br>
-<p id="notice"><%= flash.notice %></p>
+<div class="container">
+<span id="notice"><%= flash.notice %></span>
+
+<div class="container-fluid mt-3">
 
 <p>
   <strong>Category:</strong>
@@ -18,4 +13,5 @@
 <%= link_to 'Back', categories_path, class: 'btn btn-dark btn-sm' %>
 </div>
 
+</div>
 </div>

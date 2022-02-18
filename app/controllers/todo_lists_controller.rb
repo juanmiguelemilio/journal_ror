@@ -4,6 +4,7 @@ class TodoListsController < ApplicationController
   # GET /todo_lists or /todo_lists.json
   def index
     @todo_lists = TodoList.all
+    @todo_lists = current_user.todo_lists
   end
 
   # GET /todo_lists/1 or /todo_lists/1.json
@@ -22,6 +23,7 @@ class TodoListsController < ApplicationController
   # POST /todo_lists or /todo_lists.json
   def create
     @todo_list = TodoList.new(todo_list_params)
+    @todo_list = current_user.todo_lists.build(todo_list_params)
 
     respond_to do |format|
       if @todo_list.save
@@ -65,6 +67,6 @@ class TodoListsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def todo_list_params
-      params.require(:todo_list).permit(:title, :description)
+      params.require(:todo_list).permit(:title, :description, :user_id)
     end
 end
