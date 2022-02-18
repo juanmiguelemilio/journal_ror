@@ -1,13 +1,14 @@
 <div class="container">
 <div class="flex-row d-flex justify-content-center">
-<p><%= notice %> </p>
+
+
 
 <div class="col-md-8">
   <div class="">
     <h3 class="todo_list_title">Journal</h3> <hr>
     <div class="card-body">
     <%= form_for @journal do |f| %>
-
+    <p><%= notice %> </p>
     <div class="form-group">
     <%= f.label :title %>
     <%= f.text_field :title, class: 'form-control' %>
@@ -19,7 +20,7 @@
     </div> <br>
 
     <div class="form-group">
-    <%= f.select :category_id, Category.all.map { |cat| [cat.category, cat.id] } %>
+    <%= f.select :category_id, current_user.categories.map { |cat| [cat.category, cat.id] } %>
     </div> <br>
 
     <%= f.submit class: 'btn btn-dark' %>
