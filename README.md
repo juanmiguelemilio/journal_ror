@@ -1,24 +1,42 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Work smart and maximize your productivity with Polar app. This app will help you organize your journal entries into categories and reate your to do list.
 
-Things you may want to cover:
+# How to clone
+1. git clone https://github.com/mjaguirre-xx/journal_ror.git
 
-* Ruby version
+2. After cloning, run 
+```
+bundle install
+```
 
-* System dependencies
+3. Install npm
+```
+npm install
+```
 
-* Configuration
+4. Create a database
+```
+rails db:create
+```
 
-* Database creation
+5. Migrate database
+```
+rails db:migrate
+```
 
-* Database initialization
+# Polar App
+### Login
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+### Home Dashboard
 
-* Deployment instructions
 
-* ...
+### Journals
+
+
+### To Do
+
+
+
+
