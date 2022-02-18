@@ -4,7 +4,8 @@ class JournalsController < ApplicationController
 
   def index
     @journals = current_user.journals
-    @categories = Category.all
+    @categories = current_user.categories
+    # @categories = Category.all
 
     # cat = params[:cat]
     # if !cat.nil?
