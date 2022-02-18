@@ -5,7 +5,7 @@ class TodoItemsController < ApplicationController
   
   def create
     @todo_item = @todo_list.todo_items.create(todo_item_params)
-    @todo_item.user_id = current_user.id
+    @todo_item = current_user.id
     redirect_to @todo_list
   end
 
@@ -35,7 +35,7 @@ class TodoItemsController < ApplicationController
   end
 
   def todo_item_params
-    params[:todo_item].permit(:content, :user_id)
+    params[:todo_item].permit(:content)
   end
 
 end

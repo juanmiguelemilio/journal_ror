@@ -25,18 +25,24 @@ rails db:create
 rails db:migrate
 ```
 
-# Polar App
-### Login
+6. Start rails server and open the app via localhost:3000
+```
+rails s
+```
 
+# Polar App
+###### Made in Rails 6
+### Login
+![Login page](/assets/images/login.png)
 
 ### Home Dashboard
-
+![Home page](/assets/images/home.png)
 
 ### Journals
-
+![Journal page](/assets/images/journal.png)
 
 ### To Do
-
+![To Do page](/assets/images/todo.png)
 
 
 

@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :todo_lists
   has_many :categories
 
+  validates :name, presence: true
+  validates :surname, presence: true
   validates :email, presence: true
   
 end
