@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'home#dashboard'
   
   resources :categories
-  resources :journals
+  resources :journals 
 
   resources :todo_lists do
     resources :todo_items do
