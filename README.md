@@ -33,16 +33,16 @@ rails s
 # Polar App
 ###### Made in Rails 6
 ### Login
-![Login page](/assets/images/login.png)
+![Login page](login.png)
 
 ### Home Dashboard
-![Home page](/assets/images/home.png)
+![Home page](home.png)
 
 ### Journals
-![Journal page](/assets/images/journal.png)
+![Journal page](journal.png)
 
 ### To Do
-![To Do page](/assets/images/todo.png)
+![To Do page](todo.png)
 
 
 
